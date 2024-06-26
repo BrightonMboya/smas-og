@@ -1,0 +1,70 @@
+.message {
+    border-radius: $border-radius;
+    display: table;
+    position: fixed;
+    top: $header-height;
+    right: $margin;
+    z-index: 9999;
+    min-width: calc($sidebar-width + 50px);
+    max-width: calc($sidebar-width + 50px);
+    background-color: $card-background-color;
+    color: $label-color;
+    transition: $transition;
+    min-height: 100px;
+    box-shadow: $box-shadow;
+    animation: $pop-animation;
+
+    &.is-hidden {
+        opacity: 0;
+        height: 0;
+        font-size: 0;
+        padding: 0;
+        margin: 0 auto;
+        display: block;
+    }
+}
+
+.message-icon {
+    border-top-left-radius: $border-radius;
+    border-bottom-left-radius: $border-radius;
+    display: table-cell;
+    vertical-align: middle;
+    padding: $padding;
+    text-align: center;
+    background-color:$primary-color;
+    width: 60px;
+    i {
+        font-size: 2rem;
+        color: $light-color;
+        animation: $bell-shake-animation;
+    }
+}
+
+.message-body {
+    // animation: $slide-in-animation;
+    display: table-cell;
+    vertical-align: middle;
+    padding: 1rem;
+
+    p {
+        font-size: 1em;
+        font-weight: $font-weight-semibold;
+    }
+}
+
+.message-close {
+    position: absolute;
+    color: $primary-color;
+    border: none;
+    outline: none;
+    font-size: 20px;
+    right: 10px;
+    top: 10px;
+    opacity: 0;
+    cursor: pointer;
+
+    .message:hover & {
+        opacity: 1;
+    }
+
+}

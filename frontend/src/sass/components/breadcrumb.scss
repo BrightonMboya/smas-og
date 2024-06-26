@@ -1,0 +1,64 @@
+.breadcrumb {
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 996;
+    background-color: $background-color;
+    width: calc(100% - $sidebar-width);
+    height: $header-height;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    animation: $page-animation;
+    transition: $transition;
+
+    .section {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        cursor: pointer;
+        transition: $transition;
+        padding: $space;
+
+        i {
+            font-size: $sm-icon-font-size;
+            color: $primary-color;
+            margin-right: 0.5rem; /* Adding spacing between the icon and title */
+        }
+
+        .title {
+            font-size: $sub-heading-font-size; /* Slightly increased font size for better readability */
+            font-weight: $font-weight-regular;
+            color: $label-color;
+            text-transform: capitalize;
+        }
+    }
+
+    .center-section {
+        .name {
+            color: $label-color;
+            text-transform: capitalize;
+            font-size: $title-font-size;
+            font-weight: $font-weight-semibold;
+        }
+    }
+
+    .right-section {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        padding: $space;
+
+        i {
+            font-size: $sm-icon-font-size;
+            color: $primary-color;
+            margin-right: 0.5rem; /* Adding a small margin between the icon and title */
+        }
+
+        .title {
+            color: $label-color;
+            font-size: $sub-heading-font-size; /* Slightly increased font size for better readability */
+            font-weight: $font-weight-regular;
+        }
+    }
+}

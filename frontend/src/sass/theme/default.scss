@@ -1,0 +1,77 @@
+/* Fonts */
+$font-family: "Google Sans";
+$font-size: 14px;
+$heading-font-size: 18px;
+$sub-heading-font-size: 16px;
+$caption-font-size: 12px;
+$title-font-size: $heading-font-size;
+$font-weight-bold: 600;
+$font-weight-semibold: 500;
+$font-weight-regular: 400;
+$font-weight-light: 300;
+$icon-font-size: 22px;
+$sm-icon-font-size: 20px;
+$space: 16px;
+
+/* Layout Sizes */
+$sidebar-width: 250px;
+$header-height: 60px;
+$border-radius: 10px;
+$box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+$card-padding: 1.5rem;
+$badge-height: 32px;
+$table-header-height: 60px;
+$table-data-height: 55px;
+$scrollbar-size: 8px;
+
+/* Animations */
+$fade-in-animation: fadeIn 1s;
+$transition: background-color ease 0.3s;
+$page-animation: fadeIn 1s;
+$slide-in-animation: slideIn 1s;
+$rotate-animation: rotate;
+$pop-animation: pop 0.3s ease-in-out;
+$bell-shake-animation: bellShake 2.5s infinite;
+
+/* Inputs */
+$button-border-radius: $border-radius;
+$input-margin: 8px;
+$input-height: 50px;
+$input-padding: 16px;
+$input-border-radius: 4px;
+$button-height: $input-height;
+$button-padding: $input-padding;
+$button-box-shadow: 0 0 0 8px rgba(0, 0, 0, 0.1);
+$checkbox-size: 16px;
+
+$divider: 2px solid $background-color;
+
+/* Margin and Padding */
+$margin: 16px;
+$padding: $margin;
+$no-margin: 0 !important;
+$no-padding: $no-margin;
+
+/* Screen Width Above */
+$small-screen-up: 600px;
+$medium-screen-up: 992px;
+$large-screen-up: 1201px;
+
+/* Screen With Below */
+$small-screen: 600px;
+$medium-screen: 992px;
+$large-screen: 1201px;
+
+/* Screen Condition */
+$medium-and-up: "only screen and (min-width: #{$small-screen-up})";
+$large-and-up: "only screen and (min-width: #{$medium-screen-up})";
+$extra-large-and-up: "only screen and (min-width: #{$large-screen-up})";
+$small-and-down: "only screen and (max-width: #{$small-screen})";
+$medium-and-down: "only screen and (max-width: #{$medium-screen})";
+$medium-only: "only screen and (min-width: #{$small-screen-up}) and (max-width: #{$medium-screen})";
+
+/* Grid */
+$num-cols: 12;
+$gutter-width: 20px;
+$element-top-margin: 6.666666667px;
+$element-bottom-margin: 13.333333333px;

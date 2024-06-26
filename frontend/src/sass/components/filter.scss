@@ -1,0 +1,137 @@
+.filter {
+    height: $header-height;
+    background-color: $background-color;
+    border-radius: $border-radius;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-bottom: 1rem;
+    transition: $transition;
+    animation: $fade-in-animation;
+    position: relative;
+    z-index: 99;
+
+    .filter-body {
+      background-color: $card-background-color;
+      width: 100%;
+      height: 100%;
+      margin: 0 10px;
+      border-radius: $border-radius;
+
+      &:first-child {
+        margin-left: 0;
+      }
+
+      &:last-child {
+        margin-right: 0;
+      }
+
+      .filter-title {
+        display: flex;
+        align-items: center;
+        height: 100%;
+        width: 100%;
+        padding: 0 $padding;
+        cursor: pointer;
+        transition: $transition;
+
+        &:hover {
+          .title {
+            color: $primary-color;
+          }
+        }
+
+        i {
+          font-size: $icon-font-size;
+          margin-right: calc($margin - 10px);
+          color: $primary-color;
+        }
+
+        .title {
+          font-size: $font-size;
+          text-transform: capitalize;
+          font-weight: $font-weight-semibold;
+          color: $label-color;
+        }
+      }
+
+      .filter-content {
+        border-radius: $border-radius;
+        margin: 0;
+        padding: 10px;
+        background-color: $card-background-color;
+        width: 100%;
+        max-height: calc(100vh / 3);
+        overflow-y: auto;
+        display: none;
+        animation: $fade-in-animation;
+        transition: $transition;
+        box-shadow: $box-shadow;
+
+        &[data-active=true] {
+          display: block;
+        }
+
+        .filter-item {
+          cursor: pointer;
+          display: flex;
+          align-items: center;
+          border-top: $divider;
+          width: 100%;
+          height: $header-height;
+          padding: 0 calc($padding - 10px);
+          transition: $transition;
+
+          &:hover,
+          &[data-active=true] {
+            background-color: $background-color;
+
+            i,
+            .item {
+              color: $primary-color;
+            }
+          }
+
+          i {
+            font-size: $icon-font-size;
+            margin-right: calc($margin - 10px);
+            color: $label-color;
+          }
+
+          .item {
+            text-transform: capitalize;
+            font-size: $font-size;
+            font-weight: $font-weight-regular;
+            color: $label-color;
+          }
+        }
+      }
+    }
+
+    @media screen and (max-width: $medium-screen) {
+      .filter-body {
+        .filter-title {
+          align-items: center;
+          justify-content: center;
+
+          .title {
+            display: none;
+          }
+
+          i {
+            color: $label-color;
+            margin: 0;
+          }
+        }
+
+        .filter-content {
+          box-shadow: $box-shadow;
+          position: absolute;
+          left: 0;
+          right: 0;
+          animation: $page-animation;
+          transition: $transition;
+        }
+      }
+    }
+  }

@@ -1,0 +1,18 @@
+[data-tooltip]:hover::before {
+    z-index: 999;
+    position: absolute;
+    content: attr(data-tooltip);
+    background-color: $dark-color;
+    color: $light-color;
+    border-radius: $border-radius;
+    font-size: $caption-font-size;
+    font-weight: $font-weight-semibold;
+    margin-right: 180px;
+    padding: 6px 10px;
+    white-space: wrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: center;
+    max-width: calc($sidebar-width);
+    min-width: 8rem;
+}

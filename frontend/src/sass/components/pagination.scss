@@ -1,0 +1,58 @@
+.pagination {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin: $margin 0;
+    transition: $transition;
+
+    .content {
+        background-color: $background-color;
+        line-height: $badge-height;
+        height: $badge-height;
+        margin-right: 10px;
+        box-sizing: border-box;
+        cursor: pointer;
+        transition: $transition;
+
+        &:hover .link,
+        &.active .link,
+        &:hover .link i {
+            background-color: $primary-color;
+            color: $light-color;
+        }
+
+        .link {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 0 10px;
+            height: 100%;
+            font-size: $font-size;
+            font-weight: $font-weight-semibold;
+            color: $label-color;
+            transition: $transition;
+
+            i {
+                color: $primary-color;
+            }
+        }
+
+        @media screen and (max-width: $medium-screen) {
+            // Hide some pagination items on smaller screens
+            &:nth-child(7),
+            &:nth-child(8),
+            &:nth-child(9),
+            &:nth-child(10),
+            &:nth-child(11) {
+                display: none;
+            }
+            // Show the last pagination item on smaller screens
+            &:last-child {
+                display: block;
+            }
+        }
+    }
+}

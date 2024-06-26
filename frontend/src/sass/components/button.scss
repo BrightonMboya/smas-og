@@ -1,0 +1,103 @@
+button {
+  outline: none;
+  box-sizing: border-box;
+  margin: 1rem 0 0 0;
+  padding: 0 $button-padding;
+  box-shadow: none;
+  font-size: $font-size;
+  font-weight: $font-weight-semibold;
+  border: none;
+  cursor: pointer;
+  display: inline-block;
+  min-width: 100px;
+  height: $button-height;
+  background-color: $primary-color;
+  color: $light-color;
+  border-radius: $button-border-radius;
+  transition: $transition;
+  animation: $page-animation;
+
+  &:hover {
+    box-shadow: none;
+    opacity: 0.8;
+  }
+
+  &.secondary {
+    background-color: $background-color;
+    color: $label-color;
+  }
+
+  &.warning {
+    background-color: $warn-color;
+    color: $light-color;
+  }
+
+  &.success {
+    background-color: $success-color;
+    color: $light-color;
+  }
+
+  &.disabled {
+    background-color: $disabled-background-color;
+    color: $disabled-text-color;
+    cursor: not-allowed;
+    box-shadow: none;
+  }
+}
+
+.floating-button {
+  position: fixed;
+  transition: $transition;
+  animation: $page-animation;
+  right: 35px;
+  bottom: 35px;
+  z-index: 10;
+
+  a {
+    color: $light-color;
+    overflow: hidden;
+    width: 56px;
+    height: 56px;
+    line-height: 40px;
+    padding: 0;
+    background-color: $primary-color;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    i {
+      font-size: $icon-font-size;
+    }
+  }
+
+  @media screen and (min-width: $medium-screen) {
+    &.floating-button-menu {
+      width: 0;
+      display: none;
+      left: 35px;
+      bottom: 35px;
+      z-index: 999;
+    }
+  }
+
+  @media screen and (max-width: $medium-screen) {
+    display: none;
+
+    &.floating-button-menu {
+      display: block;
+      z-index: 999;
+      right: 20px;
+      bottom: 20px;
+    }
+
+    &.home {
+      display: block;
+      right: 35px;
+      bottom: 35px;
+      z-index: 999;
+    }
+  }
+}

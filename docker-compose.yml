@@ -1,0 +1,54 @@
+version: "3.3"
+services:
+  nginx:
+    depends_on:
+      - frontend
+      - backend
+    restart: always # because it is routing traffic to our entire app
+    build:
+      dockerfile: Dockerfile
+      context: ./nginx
+    ports:
+      - '81:80'
+    container_name: nginx
+    volumes:
+      - ./nginx/config/default.conf:/etc/nginx/conf.d/default.conf:ro
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    volumes:
+      - /app/node_modules # Inside the container, don't try to override this folder, just leave as is
+    restart: on-failure
+    container_name: frontend
+
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    restart: on-failure
+    container_name: backend
+    # ports:
+    #   - 2001:2001
+    volumes:
+      - ./backend:/app:rw
+      # - /app/node_modules
+    depends_on:
+      - mongo
+
+  mongo:
+    image: mongo:4.4.0
+    restart: on-failure
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=
+      - MONGO_INITDB_ROOT_PASSWORD=
+    # ports:
+    #   - 27017:27017
+    volumes:
+      - mongo:/data/db
+    container_name: mongo
+
+# MONGODB DATABASE VOLUME
+volumes:
+  mongo:

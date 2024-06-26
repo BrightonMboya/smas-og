@@ -1,0 +1,159 @@
+.report {
+    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+    font-size: 15px;
+    color: $dark-color;
+
+    .report-header {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+
+        .left-section {
+            .logo-container {
+                max-width: 150px;
+
+                .logo {
+                    height: 100%;
+                    width: 100%;
+                }
+            }
+        }
+
+        .right-section {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            justify-content: center;
+            text-transform: capitalize;
+
+            .name {
+                font-size: 18px;
+                font-weight: 600;
+                margin-bottom: 1.5px;
+            }
+
+            .area {
+                margin: 1.5px 0;
+                text-transform: capitalize;
+                font-weight: $font-weight-semibold;
+            }
+
+            .tin {
+                margin-top: 1rem;
+            }
+
+            .date {
+                font-size: 14px;
+            }
+        }
+    }
+
+    .customer {
+        margin-bottom: 1rem;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+
+        .name {
+            text-transform: capitalize;
+            font-weight: $font-weight-semibold;
+            margin: 1.5px 0;
+        }
+
+        .area {
+            text-transform: capitalize;
+            font-weight: $font-weight-semibold;
+            margin: 1.5px 0;
+        }
+
+        .report-type {
+            font-size: 16px;
+            font-weight: $font-weight-bold;
+            text-transform: uppercase;
+        }
+    }
+
+    .report-body {
+        table {
+            width: 100%;
+            border-radius: 0;
+            animation: none !important;
+            border-collapse: collapse;
+            background-color: $light-color;
+            //    page-break-inside: avoid;
+
+            td,
+            th {
+                border: 1px solid $dark-color;
+            }
+
+            th {
+                text-transform: capitalize;
+                font-size: $font-size;
+                font-weight: $font-weight-semibold;
+                color: $dark-color;
+                background-color: $light-color;
+                position: sticky;
+                top: 0;
+                height: $table-header-height;
+                background-color: #fff !important;
+            }
+
+            tr {
+                cursor: pointer;
+                text-transform: capitalize;
+                vertical-align: middle;
+                transition: none;
+                animation: none !important;
+            }
+
+            td {
+                font-size: 14px;
+                font-weight: $font-weight-regular;
+                color: $dark-color;
+                height: $table-data-height;
+                background-color: #fff !important;
+            }
+
+            tfoot {
+                display: table-row-group;
+                border: none;
+                padding: 0;
+                margin: 0;
+            }
+        }
+    }
+
+    .payment-title {
+        font-weight: $font-weight-bold;
+        text-transform: capitalize;
+        margin-bottom: 10px;
+    }
+
+    .method {
+        margin: 3px 0;
+        font-size: 12px;
+    }
+
+    .top-header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        .report-type {
+            font-size: 16px;
+            font-weight: $font-weight-bold;
+            text-transform: uppercase;
+        }
+
+        .number {
+            text-transform: capitalize;
+            font-weight: $font-weight-semibold;
+        }
+    }
+}

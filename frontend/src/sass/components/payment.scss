@@ -1,0 +1,62 @@
+.payment-wrapper {
+    padding-bottom: 25px;
+    animation: $slide-in-animation;
+
+    .payment {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        padding: 0 $card-padding;
+        transition: $transition;
+        animation: $page-animation;
+        border-bottom: $divider;
+        height: 100px;
+        width: 100%;
+        cursor: pointer;
+
+        &:hover {
+            box-shadow: $box-shadow;
+        }
+
+        .content {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: flex-start;
+
+            .icon {
+                height: $header-height;
+                width: $header-height;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                border-radius: 100px;
+                transition: $transition;
+                animation: $pop-animation;
+                margin-right: $margin;
+
+                i {
+                    font-size: $icon-font-size;
+                    color: $light-color;
+                }
+            }
+
+            .detail {
+                .title {
+                    text-transform: capitalize;
+                    font-weight: $font-weight-regular;
+                    font-size: $heading-font-size;
+                    color: $text-color;
+                }
+
+                .amount {
+                    color: $label-color;
+                    font-weight: $font-weight-semibold;
+                    font-size: $sub-heading-font-size;
+                }
+            }
+        }
+    }
+}

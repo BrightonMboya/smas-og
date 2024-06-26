@@ -1,0 +1,114 @@
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+/* Form elements */
+input[type=text],
+input[type=file],
+input[type=color],
+input[type=number],
+input[type=email],
+input[type=password],
+input[type=date],
+input[type=datetime-local],
+input[type=datetime],
+input[type=search],
+input[type=tel],
+input[type=url],
+input[type=time],
+select,
+textarea {
+    border: none;
+    border-radius: $input-border-radius;
+    color: $label-color;
+    outline: none;
+    font-size: $font-size;
+    font-weight: $font-weight-regular;
+    margin: $input-margin 0px;
+    padding: $input-padding;
+    transition: $transition;
+    background-color: $background-color;
+    width: 100%;
+    min-width: 100% !important;
+    height: $input-height;
+    animation: $slide-in-animation;
+    cursor: pointer;
+
+    &:focus {
+        background-color: rgba($primary-color, 0.1);
+    }
+
+    &::placeholder {
+        color: $label-color;
+        font-size: $font-size;
+        font-weight: $font-weight-light;
+    }
+
+    &:disabled {
+        cursor: not-allowed;
+        box-shadow: none;
+        color: $disabled-text-color;
+        font-weight: $font-weight-regular;
+        background-color: rgba($disabled-background-color, .8);
+    }
+}
+
+label {
+    margin: 0;
+    color: $text-color;
+    font-size: $font-size;
+    transition: $transition;
+    animation: $page-animation;
+    font-weight: $font-weight-semibold;
+}
+
+.helper-text {
+    position: relative;
+    min-height: 18px;
+    display: block;
+    font-size: $caption-font-size;
+    color: $error-color;
+    font-weight: $font-weight-regular;
+    margin-top: 5px;
+    animation: $page-animation;
+    transition: $transition;
+}
+
+/* Remove the default file upload button styles */
+::-webkit-file-upload-button {
+    display: none;
+}
+
+::file-selector-button {
+    display: none;
+}
+
+/* Custom styles for select elements */
+select {
+    background-color: $background-color;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+
+    option {
+        background-color: $background-color;
+        color: $label-color;
+        font-size: $font-size;
+        font-weight: $font-weight-semibold;
+    }
+}
+
+/* Custom styles for textarea */
+textarea {
+    width: 100%;
+    min-height: 150px;
+    resize: none;
+}

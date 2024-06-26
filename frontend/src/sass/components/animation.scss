@@ -1,0 +1,153 @@
+@keyframes scaleIn {
+    0% {
+        transform: scale(.75);
+    }
+}
+
+
+@-webkit-keyframes rotate {
+    from {
+        -webkit-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+
+    to {
+        -webkit-transform: rotate(360deg);
+        -o-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes rotate {
+    from {
+        -ms-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+
+    to {
+        -ms-transform: rotate(360deg);
+        -moz-transform: rotate(360deg);
+        -webkit-transform: rotate(360deg);
+        -o-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+.rotate {
+    -webkit-animation: rotate 2s linear infinite;
+    -moz-animation: rotate 2s linear infinite;
+    -ms-animation: rotate 2s linear infinite;
+    -o-animation: rotate 2s linear infinite;
+    animation: rotate 2s linear infinite;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+/* blink animation */
+@keyframes blink {
+    to {
+        visibility: hidden;
+    }
+}
+
+@-webkit-keyframes blink {
+    to {
+        visibility: hidden;
+    }
+}
+
+.blink {
+    animation: blink 1.5s steps(5, start) infinite;
+    -webkit-animation: blink 1.5s steps(5, start) infinite;
+}
+
+
+@keyframes pop {
+    0% {
+        opacity: 0;
+    }
+
+    75% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(1.1);
+    }
+}
+
+/* bellshake */
+@keyframes bellShake {
+    0% {
+        transform: rotate(0);
+    }
+
+    15% {
+        transform: rotate(50deg);
+    }
+
+    30% {
+        transform: rotate(-50deg);
+    }
+
+    45% {
+        transform: rotate(40deg);
+    }
+
+    60% {
+        transform: rotate(-40deg);
+    }
+
+    75% {
+        transform: rotate(20deg);
+    }
+
+    85% {
+        transform: rotate(-20deg);
+    }
+
+    92% {
+        transform: rotate(10deg);
+    }
+
+    100% {
+        transform: rotate(0);
+    }
+}
+
+/* animation from top */
+@-webkit-keyframes slideIn {
+    from {
+        top: -300px;
+        opacity: 0
+    }
+
+    to {
+        top: 0;
+        opacity: 1
+    }
+}
+
+@keyframes slideIn {
+    from {
+        top: -300px;
+        opacity: 0
+    }
+
+    to {
+        top: 0;
+        opacity: 1
+    }
+}

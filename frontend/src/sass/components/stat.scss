@@ -1,0 +1,63 @@
+.badge-stat {
+    width: 100%;
+    min-height: 150px;
+    background-color: $card-background-color;
+    box-sizing: border-box;
+    padding: 0 calc($padding + 0.8rem); /* Added leading zero for consistency */
+    margin-bottom: $margin;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: $border-radius;
+    transition: $transition;
+    animation: $fade-in-animation;
+    cursor: pointer;
+
+    &:hover {
+        box-shadow: $box-shadow;
+        /* padding: 2rem; */ /* Commented out to keep the original style */
+    }
+
+    .left-section {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+
+        .title {
+            text-transform: capitalize;
+            font-weight: $font-weight-regular;
+            font-size: $sub-heading-font-size;
+            color: $text-color;
+            animation: $pop-animation;
+        }
+
+        .count {
+            color: $label-color;
+            animation: $pop-animation;
+            font-weight: $font-weight-semibold;
+            font-size: $heading-font-size;
+        }
+    }
+
+    .right-section {
+        .icon {
+            height: $header-height;
+            width: $header-height;
+            background-color: $primary-color;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            border-radius: 100%;
+            transition: $transition;
+            animation: $pop-animation;
+
+            i {
+                font-size: $icon-font-size;
+                color: $light-color;
+            }
+        }
+    }
+}

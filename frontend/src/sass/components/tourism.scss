@@ -1,0 +1,131 @@
+.show-on-print {
+
+    color: #000 !important;
+
+    .invoice {
+        text-align: right;
+        margin: 0;
+        padding: $padding;
+    }
+
+    /* Invoice Header Section */
+    .invoice-header {
+        text-align: right;
+        padding: $padding;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        text-transform: capitalize;
+    }
+
+    .logo {
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 200px;
+        height: 100px;
+    }
+
+    .company-details {
+        margin: 0;
+        /* padding-left: 50px; */
+        text-align: right;
+
+        .location {
+            text-transform: capitalize;
+
+        }
+    }
+
+    /* Horizontal Line Separator */
+    .line {
+        border-top: $divider;
+    }
+
+    /* Bill To Section */
+    .bill-to-header {
+        color: $info-color;
+        padding: 10px 0;
+        font-size: $font-size;
+    }
+
+    /* Invoice Details Section */
+    .invoice-details {
+        padding-left: 50px;
+        line-height: 190%;
+    }
+
+    .invoice-details a {
+        color: black;
+        text-decoration: none;
+    }
+
+    .invoice-info {
+        text-align: right;
+        padding: 10px 0;
+    }
+
+    .amount-due {
+        font-size: 18px;
+    }
+
+    /* Item Table */
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        animation: none;
+
+        th,
+        td {
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background-color: $primary-color;
+            color: $light-color;
+            padding: 10px;
+        }
+
+        td {
+            border-bottom: $divider;
+        }
+
+        tr {
+            animation: none;
+        }
+    }
+
+    /* Invoice Notes Section */
+    .invoice-notes {
+        padding: $padding;
+        font-size: $font-size;
+    }
+
+    /* Thank You Section */
+    .thank-you {
+        color: #808080;
+        text-align: center;
+        padding-left: 50px;
+    }
+
+    /* Totals Section */
+    .totals {
+        text-align: right;
+        padding: $padding 50px;
+    }
+
+    /* Item Description Style */
+    .item-description {
+        font-weight: $font-weight-regular;
+    }
+
+    /* Section for Bill To and Invoice Info */
+    .section-two {
+        padding: $padding;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+}

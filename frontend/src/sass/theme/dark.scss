@@ -1,0 +1,60 @@
+/* Dark Theme Colors */
+$info-color: #6D828A;
+$warn-color: #FFA500;
+$error-color: #FF3333;
+$link-color: #80BFFF;
+$dark-color: #333333;
+$light-color: #FFFFFF;
+$icon-color-one: #A0A0A0;
+$icon-color-two: #B0B0B0;
+$primary-color: #0066CC;
+$success-color: #00CC66;
+$tertiary-color: #CCCCCC;
+$secondary-color: #B0B0B0;
+$background-color: #1B1B1B;
+$icon-color: $icon-color-one;
+$scrollbar-color: #5C5C5C;
+$border-color: $background-color;
+$text-color: rgba($light-color, 70%);
+$sidebar-link-color: #E0E0E0;
+$card-background-color: #121212;
+$label-color: rgba($light-color, 50%);
+$sidebar-label-color: $label-color;
+$disabled-text-color: $label-color;
+$disabled-background-color: #212121;
+$sidebar-background-color: #121212;
+$primary-text-color: rgba($dark-color, 87%);
+
+$dark-variables: (
+  info-color: $info-color,
+  warn-color: $warn-color,
+  error-color: $error-color,
+  link-color: $link-color,
+  dark-color: $dark-color,
+  light-color: $light-color,
+  icon-color-one: $icon-color-one,
+  icon-color-two: $icon-color-two,
+  primary-color: $primary-color,
+  success-color: $success-color,
+  tertiary-color: $tertiary-color,
+  secondary-color: $secondary-color,
+  background-color: $background-color,
+  icon-color: $icon-color,
+  scrollbar-color: $scrollbar-color,
+  border-color: $border-color,
+  text-color: $text-color,
+  sidebar-link-color: $sidebar-link-color,
+  card-background-color: $card-background-color,
+  label-color: $label-color,
+  sidebar-label-color: $sidebar-label-color,
+  disabled-text-color: $disabled-text-color,
+  disabled-background-color: $disabled-background-color,
+  sidebar-background-color: $sidebar-background-color,
+  primary-text-color: $primary-text-color
+);
+
+@each $var-name, $var-value in $dark-variables {
+  :root {
+    --#{$var-name}: #{$var-value};
+  }
+}

@@ -1,0 +1,141 @@
+table {
+    width: 100%;
+    position: relative;
+    border-radius: $border-radius;
+    background-color: $card-background-color;
+    animation: $slide-in-animation;
+
+    th,
+    td {
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        word-wrap: break-word;
+    }
+
+    caption {
+        padding: $padding 0;
+        text-align: left;
+        text-transform: capitalize;
+        font-size: $font-size;
+        font-weight: $font-weight-semibold;
+    }
+
+    th {
+        text-transform: capitalize;
+        font-size: $font-size;
+        font-weight: $font-weight-semibold;
+        color: $light-color;
+        background-color: rgba($primary-color, 1);
+        text-align: left;
+        position: sticky;
+        top: 0;
+        height: $table-header-height;
+        padding: 0 $padding;
+
+        &.sticky,
+        &.sticky-right {
+            width: 100%;
+            position: sticky;
+            z-index: 5;
+        }
+
+        &.sticky {
+            left: 0;
+        }
+
+        &.sticky-right {
+            right: 0;
+        }
+    }
+
+    tr {
+        cursor: pointer;
+        animation: $fade-in-animation;
+        &:nth-child(even) {
+            background-color: rgba($background-color, .8);
+        }
+
+        &:hover {
+            background-color: rgba($background-color, .5);
+            transition: $transition;
+        }
+
+    }
+
+    td {
+        font-size: $caption-font-size;
+        font-weight: $font-weight-regular;
+        text-align: left;
+        color: $text-color;
+        padding: $padding;
+
+        &.sticky,
+        &.sticky-right {
+            position: sticky;
+            z-index: 1;
+            background-color: rgba($background-color, 1);
+        }
+
+        &.sticky {
+            left: 0;
+        }
+
+        &.sticky-right {
+            right: 0;
+        }
+
+        img {
+            height: 100%;
+            // width: 100%;
+        }
+    }
+
+    tfoot {
+        border-top: 3px solid $border-color;
+    }
+
+    @media screen and (max-width: $medium-screen) {
+        thead {
+            border: none;
+            clip: rect(0 0 0 0);
+            height: 1px;
+            margin: -1px;
+            overflow: hidden;
+            padding: 0;
+            position: absolute;
+            width: 1px;
+        }
+
+        tr {
+            display: block;
+            margin-bottom: $margin;
+        }
+
+        td {
+            white-space: pre-wrap;
+            text-overflow: ellipsis;
+            word-wrap: break-word;
+            padding: $padding;
+            border: 1px solid $border-color;
+            border-bottom: none;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-size: $caption-font-size;
+            text-align: right !important;
+            height: auto;
+
+            &:last-child {
+                border-bottom: 1px solid $border-color;
+            }
+
+            &::before {
+                content: attr(data-label);
+                float: left !important;
+                font-size: $font-size;
+                font-weight: $font-weight-semibold;
+                color: $label-color;
+            }
+        }
+    }
+}

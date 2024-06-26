@@ -1,0 +1,27 @@
+.checkbox {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    label {
+      margin-left: $space;
+      cursor: pointer;
+      font-size: $font-size; /* Applying the general font size for consistent typography */
+    }
+
+    [type="checkbox"] {
+      cursor: pointer;
+      height: $checkbox-size;
+      width: $checkbox-size;
+      border-radius: $input-border-radius;
+      outline: none;
+      border: none;
+
+      &:checked {
+        accent-color: $primary-color; /* Use accent-color for checked state color (supported in some browsers) */
+        height: $checkbox-size;
+        width: $checkbox-size;
+        animation: $pop-animation;
+      }
+    }
+  }
